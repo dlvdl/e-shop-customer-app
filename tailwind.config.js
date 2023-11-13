@@ -5,21 +5,26 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        lato: ["Lato", "sans-serif"],
-        manrope: ["Manrope", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
+        inter: ["Inter", "sans-serif"],
+        grotesk: ["Space Grotesk", "sans-serif"],
       },
       fontSize: {
-        sm: ["0.875rem", "1.154rem"],
+        sm: ["0.875rem", "1.5rem"],
         base: ["1rem", "1.6rem"],
-        lg: ["1.125rem", "1.5rem"],
+        lg: ["1.25rem", "2rem"],
         xl: "2.5rem",
       },
-
       colors: {
-        "custom-black-100": "#383854",
-        "custom-black-200": "#2E2E48",
-        "custom-blue-100": "#475BE8",
-        "custom-white-100": "#F3F3F3",
+        "Neutral-01": "#FEFEFE",
+        "Neutral-03": "#E8ECEF",
+        "Neutral-04": "#141718",
+        "Neutral-05": "#343839",
+        "Neutral-07": "#6C7275",
+        "Black-200": "#EAEAEA",
+        "Black-500": "#807E7E",
+        "Black-900": "#121212",
+        "Custom-Green": "#38CB89",
       },
     },
   },
