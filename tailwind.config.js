@@ -4,6 +4,9 @@ export default {
   content: ["./src/**/*.{html,tsx}"],
   theme: {
     extend: {
+      backgroundImage: {
+        "header-texture": "url('/public/placeholder.png')",
+      },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
         inter: ["Inter", "sans-serif"],
