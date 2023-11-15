@@ -1,11 +1,14 @@
 import { FunctionComponent } from "react"
+import { BackgroundBox, Header, Shop } from "../components"
 
 interface Props {}
 
 const ShopPage: FunctionComponent<Props> = () => {
   return (
-    <div>
-      <h1 className="text-red-500 font-inter">Homepage</h1>
+    <div className="max-w-screen-xl mx-auto ">
+      <Header />
+      <BackgroundBox />
+      <Shop />
     </div>
   )
 }
