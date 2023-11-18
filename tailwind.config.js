@@ -28,6 +28,7 @@ export default {
         "Black-500": "#807E7E",
         "Black-900": "#121212",
         "Custom-Green": "#38CB89",
+        "Custom-White": "#F2F4F6",
       },
     },
   },
