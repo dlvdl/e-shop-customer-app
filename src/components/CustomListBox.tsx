@@ -1,5 +1,6 @@
 import { Listbox } from "@headlessui/react"
 import { FunctionComponent, useState } from "react"
+import { chevronDown } from "../assets"
 
 interface Props {
   title: string
@@ -19,15 +20,25 @@ const CustomListbox: FunctionComponent<Props> = ({
   const [selectedOption, setSelectedOption] = useState(options[0])
 
   return (
-    <div>
+    <div className="relative">
       {_static && (
-        <h3 className="uppercase text-base font-semibold font-inter">
+        <h3 className="uppercase text-base font-semibold font-inter mb-3">
           {title}
         </h3>
       )}
       <Listbox value={selectedOption} onChange={setSelectedOption}>
-        {!_static && <Listbox.Button>{title}</Listbox.Button>}
-        <Listbox.Options className={"flex flex-col"} static={_static}>
+        {!_static && (
+          <Listbox.Button>
+            <div className="flex gap-1 items-center">
+              <p className="font-inter font-semibold text-base">{title}</p>
+              <img src={chevronDown} alt="chevron" />
+            </div>
+          </Listbox.Button>
+        )}
+        <Listbox.Options
+          className={`flex flex-col gap-3 ${!_static && "absolute top-7 z-30"}`}
+          static={_static}
+        >
           {options.map((option) => (
             <Listbox.Option
               key={option.id}
