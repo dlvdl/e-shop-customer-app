@@ -10,10 +10,10 @@ interface Props {
 
 const ProductCard: FunctionComponent<Props> = ({ image, name, rating }) => {
   return (
-    <div className="w-full">
+    <div className="w-full h-full [&>*]:py-1">
       <div className="relative group">
-        <div className="z-10 brightness-95">
-          <img src={image} alt="product_image" />
+        <div className="z-10">
+          <img className="w-full" src={image} alt="product_image" />
         </div>
         <button className="group-hover:opacity-100 transition-opacity opacity-0 absolute top-2 right-2 p-2 bg-white aspect-square rounded-full flex items-center justify-center">
           <img className="w-5 h-5 " src={Heart} alt="heart" />
