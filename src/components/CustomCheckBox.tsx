@@ -30,10 +30,12 @@ const CustomCheckBox: FunctionComponent<Props> = ({ title, options }) => {
 
   return (
     <div>
-      <h3 className="uppercase text-base font-semibold font-inter">{title}</h3>
+      <h3 className="uppercase text-base font-semibold font-inter mb-3">
+        {title}
+      </h3>
       <Listbox value={selectedOptions} onChange={setSelectedOptions}>
         {/* <Listbox.Button>{selectedOptions.name}</Listbox.Button> */}
-        <Listbox.Options className={"flex flex-col"} static>
+        <Listbox.Options className={"flex flex-col gap-3"} static>
           {selectedBoxes.map((option, i) => (
             <Listbox.Option
               key={option.id}
