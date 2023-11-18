@@ -32,49 +32,56 @@ const sortCategory = [
 
 const Shop: FunctionComponent<Props> = () => {
   return (
-    <div className="grid grid-cols-6">
+    <div className="grid grid-cols-6 h-full grid-rows-[1fr,min-content] gap-6">
       <div>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 mb-10">
           <img className="w-6 h-6" src={FilterIcon} alt="#" />
           <p className="font-semibold text-lg font-inter">Filter</p>
         </div>
-        <CustomListBox title="Categories" options={options} _static={true} />
-        <CustomCheckBox title="Price" options={prices} />
+        <div className="mb-9">
+          <CustomListBox title="Categories" options={options} _static={true} />
+        </div>
+        <div>
+          <CustomCheckBox title="Price" options={prices} />
+        </div>
       </div>
       <div className="col-start-2 col-end-7">
-        <div className="flex justify-between ">
+        <div className="flex justify-between mb-10">
           <p className="font-semibold text-lg font-inter">Living Room</p>
-          <div className="flex">
+          <div className="flex items-center gap-8">
             <CustomListBox
               options={sortCategory}
               _static={false}
               title="Sort by"
             />
-            <div>
-              <button>
+            <div className="grid grid-cols-4">
+              <button className="p-2 border border-Neutral-03 hover:bg-Neutral-03">
                 <img src={Grid_1} alt="" />
               </button>
-              <button>
+              <button className="p-2 border border-Neutral-03 hover:bg-Neutral-03">
                 <img src={Grid_2} alt="" />
               </button>
-              <button>
+              <button className="p-2 border border-Neutral-03 hover:bg-Neutral-03">
                 <img src={Grid_3} alt="" />
               </button>
-              <button>
+              <button className="p-2 border border-Neutral-03 hover:bg-Neutral-03">
                 <img src={Grid_4} alt="" />
               </button>
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-3 gap-6">
+        <div className="grid grid-cols-3 auto-cols-fr  gap-4 w-full h-full relative">
           <ProductCard image={P} name="Sofa" rating={4} />
           <ProductCard image={P} name="Sofa" rating={5} />
           <ProductCard image={P} name="Sofa" rating={3} />
           <ProductCard image={P} name="Sofa" rating={4} />
           <ProductCard image={P} name="Sofa" rating={5} />
           <ProductCard image={P} name="Sofa" rating={3} />
-          <div className="col-span-3 flex justify-center">
-            <button className="border rounded-[80px] border-Neutral-04">
+          <ProductCard image={P} name="Sofa" rating={4} />
+          <ProductCard image={P} name="Sofa" rating={5} />
+          <ProductCard image={P} name="Sofa" rating={3} />
+          <div className="col-span-3 flex justify-center mt-20 mb-24">
+            <button className="border rounded-[80px] border-Neutral-04 max-h-10 flex justify-center items-center">
               <p className="px-10 leading-7 py-2 font-medium font-inter text-base text-Neutral-04">
                 Show more
               </p>

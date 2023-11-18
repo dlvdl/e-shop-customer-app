@@ -1,7 +1,8 @@
+/* eslint-disable react-refresh/only-export-components */
 import Cart from "./cart.svg"
 import Search from "./search.svg"
 import Profile from "./profile.svg"
-import LogoHeader from "./3legant..svg"
+import LogoHeader from "./3legant.svg"
 import ImagePlaceholder from "./placeholder.png"
 import FilterIcon from "./filter.svg"
 import Grid_1 from "./grid-1.svg"
@@ -12,6 +13,13 @@ import Star_f from "./star_active.svg"
 import Star_h from "./Star_disebled.svg"
 import P from "./069a0857fe7da4976ba73bf5db64a055.jpeg"
 import Heart from "./heart.svg"
+import ImagePlaceholder2 from "./palaceHolder2.png"
+import email from "./email.svg"
+import facebookIcon from "./faceBook.svg"
+import instaIcon from "./insta.svg"
+import youtubeIcon from "./youtube.svg"
+import whiteLogo from "./whiteLogo.svg"
+import chevronDown from "./chevrom.svg"
 
 export {
   FilterIcon,
@@ -28,4 +36,11 @@ export {
   Star_h,
   P,
   Heart,
+  ImagePlaceholder2,
+  email,
+  facebookIcon,
+  instaIcon,
+  youtubeIcon,
+  whiteLogo,
+  chevronDown,
 }
