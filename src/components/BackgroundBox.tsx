@@ -1,19 +1,33 @@
-import { FunctionComponent } from "react"
+import {
+  FunctionComponent,
+  ReactChild,
+  ReactFragment,
+  ReactPortal,
+} from "react"
 import {} from "../assets"
 
-interface Props {}
+type ReactNode =
+  | ReactChild
+  | ReactFragment
+  | ReactPortal
+  | boolean
+  | null
+  | undefined
 
-const BackgroundBox: FunctionComponent<Props> = () => {
+interface Props {
+  bg: string
+  children: ReactNode
+}
+
+const BackgroundBox: FunctionComponent<Props> = ({ bg, children }) => {
   return (
-    <div className="bg-header-texture w-full h-[392px] flex justify-center items-center bg-no-repeat bg-cover">
-      <div>
-        <h1 className="text-[54px] text-black font-poppins text-center tracking-tight">
-          Shop Page
-        </h1>
-        <p className="text-lg font-inter text-center leading-8">
-          Let’s design the place you always imagined.
-        </p>
-      </div>
+    <div
+      style={{
+        backgroundImage: `url('${bg}')`,
+      }}
+      className={`w-full min-h-[392px] flex justify-center items-center bg-no-repeat bg-cover grow`}
+    >
+      <div>{children}</div>
     </div>
   )
 }
