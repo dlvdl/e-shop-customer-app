@@ -5,6 +5,7 @@ import CustomListBox from "./CustomListBox"
 import CustomCheckBox from "./CustomCheckBox"
 import Footer from "./Footer"
 import Tabs from "./Tabs"
+import Cart from "./Cart"
 
 export {
   Header,
@@ -14,4 +15,5 @@ export {
   CustomCheckBox,
   Footer,
   Tabs,
+  Cart,
 }

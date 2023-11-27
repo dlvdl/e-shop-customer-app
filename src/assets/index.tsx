@@ -20,6 +20,8 @@ import instaIcon from "./insta.svg"
 import youtubeIcon from "./youtube.svg"
 import whiteLogo from "./whiteLogo.svg"
 import chevronDown from "./chevrom.svg"
+import radioIcon from "./radio.svg"
+import closeIcon from "./close.svg"
 
 export {
   FilterIcon,
@@ -43,4 +45,6 @@ export {
   youtubeIcon,
   whiteLogo,
   chevronDown,
+  radioIcon,
+  closeIcon,
 }

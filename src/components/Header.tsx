@@ -1,5 +1,6 @@
 import { FunctionComponent } from "react"
 import { LogoHeader, Cart, Profile, Search } from "../assets"
+import { Link } from "react-router-dom"
 
 interface Props {}
 
@@ -12,7 +13,9 @@ const Header: FunctionComponent<Props> = () => {
         </div>
         <nav>
           <ul className="flex justify-between gap-10 text-Neutral-07 font-grotesk text-sm">
-            <li className="hover:text-Neutral-04">Home</li>
+            <li className="hover:text-Neutral-04">
+              <Link to={"/"}>Home</Link>
+            </li>
             <li className="hover:text-Neutral-04">Shop</li>
             <li className="hover:text-Neutral-04">Product</li>
             <li className="hover:text-Neutral-04">Contacts us</li>
@@ -28,7 +31,9 @@ const Header: FunctionComponent<Props> = () => {
               <img src={Profile} alt="#" />
             </li>
             <li>
-              <img src={Cart} alt="#" />
+              <Link to={"/cart"}>
+                <img src={Cart} alt="#" />
+              </Link>
             </li>
           </ul>
         </div>
